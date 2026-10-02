@@ -1,9 +1,21 @@
 pub fn double_values(nums: Vec<i32>) -> Vec<i32> {
-    todo!("Double every value")
+    let mut ret = Vec::new();
+    for i in nums.iter() {
+        ret.push(*i * 2);
+    }
+    return ret;
+    //todo!("Double every value")
 }
 
 pub fn sum_positive(nums: &[i32]) -> i32 {
-    todo!("Return the sum of positive values")
+    let mut value = 0;
+    for i in nums.iter() {
+        if *i > 0 {
+            value += *i;
+        }
+    }
+    return value;
+    //todo!("Return the sum of positive values")
 }
 
 #[cfg(test)]

@@ -1,9 +1,23 @@
 pub fn first_even(nums: &[i32]) -> Option<i32> {
-    todo!("Return the first even value")
+    for i in nums.iter() {
+        if *i % 2 == 0 {
+            return Some(*i);
+        }
+    }
+
+    return None;
+    //todo!("Return the first even value")
 }
 
 pub fn all_positive(nums: &[i32]) -> bool {
-    todo!("Return whether all values are positive")
+    for i in nums.iter() {
+        if *i <= 0 {
+            return false;
+        }
+    }
+
+    return true;
+    //todo!("Return whether all values are positive")
 }
 
 #[cfg(test)]

@@ -1,11 +1,29 @@
 use std::collections::HashMap;
 
 pub fn count_occurrences(nums: &[i32]) -> HashMap<i32, usize> {
-    todo!("Count how many times each value occurs")
+    let mut h_map : HashMap<i32, usize> = HashMap::new();
+    for n in nums.iter() {
+        *h_map.entry(*n).or_insert(0) += 1;
+    }
+    return h_map;
+    //todo!("Count how many times each value occurs")
 }
 
 pub fn most_frequent(nums: &[i32]) -> Option<i32> {
-    todo!("Return a most frequent value")
+    let h_map = count_occurrences(nums);
+    if h_map.len() == 0 {
+        return None;
+    }
+    let mut max_occurence : usize = 0;
+    let mut max_num : i32 = 0;
+    for h in h_map.iter() {
+        if *h.1 > max_occurence {
+            max_occurence = *h.1;
+            max_num = *h.0;
+        }
+    }
+    return  Some(max_num);
+    //todo!("Return a most frequent value")
 }
 
 #[cfg(test)]
