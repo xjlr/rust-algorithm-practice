@@ -2,7 +2,25 @@ pub struct Solution;
 
 impl Solution {
     pub fn two_sum(numbers: Vec<i32>, target: i32) -> Vec<i32> {
-        todo!("Implement Two Sum II")
+        if numbers.is_empty() {
+            return vec![-1, -1];
+        }
+        let mut begin = 0;
+        let mut end = numbers.len() - 1;
+        while begin < end {
+            if numbers[begin] + numbers[end] == target {
+                return vec![begin as i32 + 1, end as i32 + 1];
+            }
+
+            if numbers[begin] + numbers[end] < target {
+                begin += 1;
+            } else {
+                end -= 1;
+            }
+        }
+
+        return vec![-1, -1];
+        //todo!("Implement Two Sum II")
     }
 }
 
@@ -27,7 +45,7 @@ mod tests {
 
     #[test]
     fn duplicate_values() {
-        assert_eq!(Solution::two_sum(vec![1, 2, 3, 3, 5], 6), vec![3, 4]);
+        assert_eq!(Solution::two_sum(vec![1, 2, 3, 3, 7], 6), vec![3, 4]);
     }
 
     #[test]
