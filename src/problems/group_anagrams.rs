@@ -2,8 +2,7 @@ pub struct Solution;
 
 impl Solution {
     pub fn group_anagrams(strs: Vec<String>) -> Vec<Vec<String>> {
-        let mut anagram_groups:
-            std::collections::HashMap<String, Vec<String>> =
+        let mut anagram_groups: std::collections::HashMap<String, Vec<String>> =
             std::collections::HashMap::new();
 
         for s in strs {
@@ -90,11 +89,7 @@ mod tests {
 
         let result = Solution::group_anagrams(input);
 
-        let expected = vec![
-            strings(&["abc"]),
-            strings(&["def"]),
-            strings(&["ghi"]),
-        ];
+        let expected = vec![strings(&["abc"]), strings(&["def"]), strings(&["ghi"])];
 
         assert_eq!(normalize(result), normalize(expected));
     }
@@ -116,10 +111,7 @@ mod tests {
 
         let result = Solution::group_anagrams(input);
 
-        let expected = vec![
-            strings(&["aab", "aba", "baa"]),
-            strings(&["abb"]),
-        ];
+        let expected = vec![strings(&["aab", "aba", "baa"]), strings(&["abb"])];
 
         assert_eq!(normalize(result), normalize(expected));
     }
@@ -130,12 +122,8 @@ mod tests {
 
         let result = Solution::group_anagrams(input);
 
-        let expected = vec![
-            strings(&["", ""]),
-            strings(&["a"]),
-        ];
+        let expected = vec![strings(&["", ""]), strings(&["a"])];
 
         assert_eq!(normalize(result), normalize(expected));
     }
 }
-

@@ -2,7 +2,35 @@ pub struct Solution;
 
 impl Solution {
     pub fn is_palindrome(s: String) -> bool {
-        todo!("Implement Valid Palindrome")
+        if s.is_empty() {
+            return true;
+        }
+        let ch: Vec<char> = s.chars().collect();
+        let mut begin: usize = 0;
+        let mut end = ch.len() - 1;
+
+        while begin < end {
+            if !ch[begin].is_ascii_alphanumeric() {
+                begin += 1;
+                continue;
+            }
+
+            if !ch[end].is_ascii_alphanumeric() {
+                end -= 1;
+                continue;
+            }
+
+            let c1 = ch[begin].to_ascii_lowercase();
+            let c2 = ch[end].to_ascii_lowercase();
+            if c1 != c2 {
+                return false;
+            }
+            begin += 1;
+            end -= 1;
+        }
+
+        return true;
+        //todo!("Implement Valid Palindrome")
     }
 }
 
