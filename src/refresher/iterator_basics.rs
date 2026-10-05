@@ -5,7 +5,7 @@ pub fn first_even(nums: &[i32]) -> Option<i32> {
         }
     }
 
-    return None;
+    None
     //todo!("Return the first even value")
 }
 
@@ -16,7 +16,7 @@ pub fn all_positive(nums: &[i32]) -> bool {
         }
     }
 
-    return true;
+    true
     //todo!("Return whether all values are positive")
 }
 

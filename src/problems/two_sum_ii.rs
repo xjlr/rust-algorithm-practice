@@ -19,7 +19,7 @@ impl Solution {
             }
         }
 
-        return vec![-1, -1];
+        vec![-1, -1]
         //todo!("Implement Two Sum II")
     }
 }

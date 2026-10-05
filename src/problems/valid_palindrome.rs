@@ -29,7 +29,7 @@ impl Solution {
             end -= 1;
         }
 
-        return true;
+        true
         //todo!("Implement Valid Palindrome")
     }
 }

@@ -5,13 +5,13 @@ pub fn count_occurrences(nums: &[i32]) -> HashMap<i32, usize> {
     for n in nums.iter() {
         *h_map.entry(*n).or_insert(0) += 1;
     }
-    return h_map;
+    h_map
     //todo!("Count how many times each value occurs")
 }
 
 pub fn most_frequent(nums: &[i32]) -> Option<i32> {
     let h_map = count_occurrences(nums);
-    if h_map.len() == 0 {
+    if h_map.is_empty() {
         return None;
     }
     let mut max_occurence: usize = 0;
@@ -22,7 +22,7 @@ pub fn most_frequent(nums: &[i32]) -> Option<i32> {
             max_num = *h.0;
         }
     }
-    return Some(max_num);
+    Some(max_num)
     //todo!("Return a most frequent value")
 }
 

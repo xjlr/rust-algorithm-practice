@@ -3,7 +3,7 @@ pub fn double_values(nums: Vec<i32>) -> Vec<i32> {
     for i in nums.iter() {
         ret.push(*i * 2);
     }
-    return ret;
+    ret
     //todo!("Double every value")
 }
 
@@ -14,7 +14,7 @@ pub fn sum_positive(nums: &[i32]) -> i32 {
             value += *i;
         }
     }
-    return value;
+    value
     //todo!("Return the sum of positive values")
 }
 
