@@ -5,6 +5,7 @@ pub mod daily_temperatures;
 pub mod evaluate_reverse_polish_notation;
 pub mod group_anagrams;
 pub mod longest_substring_without_repeating_characters;
+pub mod lru_cache;
 pub mod merge_intervals;
 pub mod min_stack;
 pub mod product_of_array_except_self;
