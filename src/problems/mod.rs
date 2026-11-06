@@ -4,6 +4,7 @@ pub mod container_with_most_water;
 pub mod daily_temperatures;
 pub mod evaluate_reverse_polish_notation;
 pub mod group_anagrams;
+pub mod kth_largest_element_in_a_stream;
 pub mod longest_substring_without_repeating_characters;
 pub mod lru_cache;
 pub mod merge_intervals;
