@@ -10,6 +10,7 @@ pub mod lru_cache;
 pub mod merge_intervals;
 pub mod min_stack;
 pub mod product_of_array_except_self;
+pub mod search_in_rotated_sorted_array;
 pub mod top_k_frequent_elements;
 pub mod three_sum;
 pub mod two_sum;
